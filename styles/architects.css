@@ -105,8 +105,45 @@
 #quick-list{
     font-weight: 500;
 }
+/* featurer section stylse */
+.features{
+  gap: 140px;
+}
+#feature-section-title{
+  border-left: 5px solid #ff900E;
+  padding-left: 20px;
+}
+.fearure-card {
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 30px 0 rgb(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.fearure-card .feature-title{
+  font-weight: 600;
+  font-size: 1.25rem;
+  margin-bottom: 0px;
+  
+}
+#experience-badge{
+  padding: 45px 42px;
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-left: -100px;
+  margin-top: -100px;
+}
+#experience-year{
+  font-size: 4rem;
+  font-weight: 700;
+}
+
+.feauter-architect{
+  width: 100%;
+}
 
 /* some facts related styles */
+
 
 .facts-container{
   display: grid;
@@ -135,21 +172,68 @@
 .fact-description{
   max-width: 530px;
 }
+/* sponsor related styles */
+.sponsor-info{
+  max-width: 540px;
+  margin: 50px auto;
+  text-align: center;
+}
+.sponsor-companies{
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+.sponsor-companies img{
+  filter: grayscale(100%);
+}
+/* footer */
+.fotter-content{
+  background-color: rgb(255, 244, 231);
+  height: 6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 50px;
+}
+
+
+
+
+
+
+
   /* responsive media quary */
   @media screen and (max-width: 576px) {
     .nevbar,
-     .nav-links
-     .teams 
+     .nav-links,
+     .teams,
+     .features 
      {
         flex-direction: column;
     }
-    .team-img-contaienr{
-      grid-template-columns: repeat(1, 1fr);
+    .team-img-contaienr, .facts-container,
+    .sponsor-companies, .fotter-content{
+      grid-template-columns: 1fr;
+    }
+
+    .facts-container, .sponsor-companies{
+      justify-content: center;
+      gap: 24px;
     }
     .our-features{
       margin-left: 20px;
       
     }
+    .sponsor-companies{
+      grid-template-columns: repeat(2, 1fr);
+      gap: 50px;
+    }
+    #experience-badge{
+      margin-top: 20px;
+      margin-left: 20px;
+    }
+   
+    
     
   }
 @media screen and (min-width: 576px) and (max-width: 992px) {
@@ -160,4 +244,15 @@
   .our-features{
     margin-left: 50px auto;
   }
+  .facts-container,
+    .sponsor-companies{
+      grid-template-columns: repeat(2, 1fr);
+      gap: 50px;
+      justify-content: center;
+    }
+  #experience-badge{
+    margin-top: 20px;
+    margin-left: 20px;
+  }
+  
 }
